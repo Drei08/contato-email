@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #121212;
+  color: #00D0FF;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.title{
+  margin-bottom: 14px;
+}
+
+.form{
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input{
+  align-self: center;
+  margin-bottom: 14px;
+  width: 80%;
+  max-width: 500px;
+  height: 34px;
+  border-radius: 4px;
+  border: 0;
+  padding: 0 8px;
+  color: #FFF;
+  background-color: #464646;
+  box-sizing: border-box;
+}
+
+.textarea{
+  align-self: center;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  border: 0;
+  padding: 8px;
+  width: 80%;
+  max-width: 500px;
+  height: 145px;
+  resize: none;
+  color: #FFF;
+  background-color: #464646;
+  box-sizing: border-box;
+}
+
+.button{
+  align-self: center;
+  width: 150px;
+  height: 34px;
+  border-radius: 4px;
+  border: 2px solid #00D0FF;
+  cursor: pointer;
+  background-color: #00D0FF;
+  color: #0e0d0d;
+  font-size: 18px;
+  transition: background-color, transform 0.8s;
+}
+
+.button:hover{
+  background-color: #01df69;
+  transform: scale(1.01);
+}
+
+.input:focus, 
+.textarea:focus {
+  outline: 1.5px solid #00D0FF; 
+  outline-offset: 1.5px;
+}
+
+
+.button:disabled {
+  background-color: #484848;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+
+/* MQ */
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .App {
+    padding: 15px;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+
+  .input, .textarea {
+    height: 45px;
+  }
+  
+  .textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  .button {
+    width: 45%;
+    max-width: 500px; 
+    height: 40px;
+  }
+}
